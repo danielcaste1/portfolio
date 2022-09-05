@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import "./Styles/styles.css";
+import React, { Fragment } from "react";
+import { PresentationCard } from "./Components/Presentation";
+import { NavigationBar } from "./Components/NavigationBar";
+import { AboutMe } from "./Components/AboutMe";
 
 function App() {
+  const title = "Hello!";
+  const description =
+    "My Name is Daniel Castellanos, I'm a Junior Web Developer";
+
+  const sections = [
+    {
+      name: "About Me",
+      id: "about",
+    },
+    {
+      name: "Projects",
+      id: "projects",
+    },
+    {
+      name: "Hobbies",
+      id: "hobbies",
+    },
+    {
+      name: "Contact",
+      id: "contact",
+    },
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <PresentationCard title={title} description={description} />
+      <NavigationBar sections={sections} />
+      <AboutMe/>
+    </Fragment>
   );
 }
 
