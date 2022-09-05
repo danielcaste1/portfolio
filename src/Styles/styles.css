@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.presentation {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  align-items: center;
+  margin: 5rem auto;
+  padding: 5rem 0;
+}
+.presentation__info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.presentation__info .presentation__title {
+  text-align: end;
+  font-size: 3.6rem;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 600;
+  color: #000000;
+}
+.presentation__info .presentation__paragraph {
+  text-align: end;
+  max-width: 50%;
+  font-size: 2.2rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: #000000;
+}
+.presentation .presentation__portrait {
+  position: relative;
+  display: flex;
+  justify-content: start;
+  margin: 0 2rem;
+}
+.presentation .presentation__portrait .portrait__img {
+  position: absolute;
+  height: 320px;
+}
+.presentation .presentation__portrait .portrait__img img {
+  max-height: 100%;
+}
+.presentation .presentation__portrait .portrait__figure {
+  width: 320px;
+  height: 320px;
+  background-color: #c670ff;
+  border-radius: 50%;
+}
+
+.sections__bar {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 3rem auto;
+  padding: 3rem 0;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about .about__title {
+  font-size: 5rem;
+}
+.about .about__description {
+  padding: 2rem;
+  display: flex;
+}
+.about .about__description .about__image {
+  min-width: 320px;
+}
+.about .about__description .about__image img {
+  width: 100%;
+}
+.about .about__description .about__info {
+  font-size: 1.6rem;
+  padding: 2rem;
+}

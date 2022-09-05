@@ -1,0 +1,42 @@
+.presentation {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  align-items: center;
+  margin: 5rem auto;
+  padding: 5rem 0;
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    .presentation__title {
+      text-align: end;
+      @include title;
+    }
+    .presentation__paragraph {
+      text-align: end;
+      max-width: 50%;
+      @include main-paragraph;
+    }
+  }
+
+  .presentation__portrait {
+    position: relative;
+    display: flex;
+    justify-content: start;
+    margin: 0 2rem;
+    .portrait__img {
+      position: absolute;
+      height: 320px;
+      img {
+        max-height: 100%;
+      }
+    }
+    .portrait__figure {
+      width: 320px;
+      height: 320px;
+      background-color: #c670ff;
+      border-radius: 50%;
+    }
+  }
+}

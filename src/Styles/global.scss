@@ -1,0 +1,60 @@
+//Colors
+  //Main Palette
+  $color-primary: #c670ff;
+  $color-secondary: #ffe047;
+  $color-alternative: #35e95f;
+
+  //Texts
+  $color-primary-text: #000000;
+  $color-secondary-text: #464853;
+  $color-optional-text: #757678;
+  $color-altenative-text: #f2ddff;
+//Fonts
+  //typography
+  $font-primary: 'Barlow Condensed', sans-serif;
+  $font-secondary: 'Montserrat', sans-serif;
+
+  //sizes
+  $xlg: 3.6rem;
+  $lg : 2.8rem;
+  $md : 2.2rem;
+  $sm : 1.8rem;
+  $xsm : 1.2rem;
+
+  //weights
+  $xbold: 800;
+  $bold : 600;
+  $normal : 400;
+  $light : 300;
+  $xlight : 200;
+
+
+//mixins
+@mixin title {
+  font-size: $xlg;
+  font-family: $font-primary;
+  font-weight: $bold;
+  color: $color-primary-text;
+}
+
+@mixin main-paragraph {
+  font-size: $md;
+  font-family: $font-secondary;
+  font-weight: $bold;
+  color: $color-primary-text;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+}
