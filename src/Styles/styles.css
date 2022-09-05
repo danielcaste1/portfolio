@@ -44,7 +44,7 @@ html {
 .presentation .presentation__portrait {
   position: relative;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   margin: 0 2rem;
 }
 .presentation .presentation__portrait .portrait__img {
@@ -90,3 +90,5 @@ html {
   font-size: 1.6rem;
   padding: 2rem;
 }
+
+/*# sourceMappingURL=styles.css.map */
