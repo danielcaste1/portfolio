@@ -1,23 +1,28 @@
 .about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    .about__title {
-        @include title($color-primary-text);
-    }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  .about__title {
+    @include title($color-primary-text);
+  }
 
-    .about__description { 
-        padding: 2rem;
-        display: flex;
-        .about__image {
-            min-width: 320px;
-            img {
-                width: 100%;
-            }
-        }
-        .about__info {
-            font-size: 1.6rem;
-            padding: 2rem;
-        }
+  .about__description {
+    margin: 3rem auto;
+    padding: 0rem 2rem;
+    display: flex;
+    align-items: center;
+    @include info-paragraph($color-secondary-text);
+    .about__image {
+      min-width: 320px;
+      img {
+        width: 100%;
+      }
     }
+    .about__info {
+      font-size: 1.6rem;
+      padding: 0rem 2rem;
+    }
+  }
 }

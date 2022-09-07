@@ -1,0 +1,37 @@
+.studies{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__title{
+        text-align: center;
+        @include title($color-primary-text);
+    }
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5rem;
+        padding-top: 10rem;
+        .study {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 3rem 1rem;
+            border: 2px solid $color-alternative;
+            &__title {
+                @include info-paragraph($color-alternative);
+            }
+            &__institution {
+                @include optional-info-paragraph($color-alternative);
+            }
+            svg{
+                font-size: $lg;
+                color: $color-alternative;
+                animation: spin 20s linear infinite;
+            }
+            @keyframes spin {
+                from{transform: rotate(0deg);}
+                to{transform: rotate(360deg);}
+            }
+        }
+    }
+}

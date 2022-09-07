@@ -1,34 +1,33 @@
 //Colors
-  //Main Palette
-  $color-primary: #c670ff;
-  $color-secondary: #ffe047;
-  $color-alternative: #35e95f;
+//Main Palette
+$color-primary: #c670ff;
+$color-secondary: #ffe047;
+$color-alternative: #35e95f;
 
-  //Texts
-  $color-primary-text: #000000;
-  $color-secondary-text: #464853;
-  $color-optional-text: #757678;
-  $color-altenative-text: #f2ddff;
-  $color-invert-text: #ffffff;
+//Texts
+$color-primary-text: #464646;
+$color-secondary-text: #6b6b6e;
+$color-optional-text: #757678;
+$color-altenative-text: #f2ddff;
+$color-invert-text: #ffffff;
 //Fonts
-  //typography
-  $font-primary: 'Barlow Condensed', sans-serif;
-  $font-secondary: 'Montserrat', sans-serif;
+//typography
+$font-primary: "Barlow Condensed", sans-serif;
+$font-secondary: "Montserrat", sans-serif;
 
-  //sizes
-  $xlg: 3.6rem;
-  $lg : 2.8rem;
-  $md : 2.2rem;
-  $sm : 1.8rem;
-  $xsm : 1.2rem;
+//sizes
+$xlg: 3.6rem;
+$lg: 2.8rem;
+$md: 2.2rem;
+$sm: 1.8rem;
+$xsm: 1.2rem;
 
-  //weights
-  $xbold: 800;
-  $bold : 600;
-  $normal : 400;
-  $light : 300;
-  $xlight : 200;
-
+//weights
+$xbold: 800;
+$bold: 600;
+$normal: 400;
+$light: 300;
+$xlight: 200;
 
 //mixins
 @mixin title($color) {
@@ -46,9 +45,18 @@
 }
 
 @mixin info-paragraph($color) {
+  line-height: 3rem;
   font-size: $sm;
   font-family: $font-secondary;
   font-weight: $normal;
+  color: $color;
+}
+
+@mixin optional-info-paragraph($color) {
+  line-height: 1.5rem;
+  font-size: $xsm;
+  font-family: $font-secondary;
+  font-weight: $light;
   color: $color;
 }
 
