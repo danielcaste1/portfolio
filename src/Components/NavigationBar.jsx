@@ -3,7 +3,7 @@ import { SectionButton } from "./SectionButton";
 
 function NavigationBar({sections}){
     return (
-        <nav className="sections__bar container">
+        <nav className="sections__bar">
             {
                 sections.map((section)=>{
                     return(

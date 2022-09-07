@@ -4,6 +4,7 @@ import { PresentationCard } from "./Components/Presentation";
 import { NavigationBar } from "./Components/NavigationBar";
 import { AboutMe } from "./Components/AboutMe";
 import { Projects } from "./Components/Projects";
+import { Studies } from "./Components/Studies";
 
 function App() {
   const title = "Hello!";
@@ -20,8 +21,8 @@ function App() {
       id: "projects",
     },
     {
-      name: "Hobbies",
-      id: "hobbies",
+      name: "Studies",
+      id: "studies",
     },
     {
       name: "Contact",
@@ -61,12 +62,29 @@ function App() {
     },
   ];
 
+  //Projects
+  const studies = [
+    {
+      institution: "SENA",
+      title: "Systems Technician"
+    },
+    {
+      institution: "Sergio Arboleda University",
+      title: "MinTic Mision 2022 Tripulant"
+    },
+    {
+      institution: "Platzi",
+      title: "Frontend Developer"
+    },
+  ]
+
   return (
     <Fragment>
       <PresentationCard title={title} description={description} />
       <NavigationBar sections={sections} />
       <AboutMe />
       <Projects projects={projects} />
+      <Studies studies={studies}/>
     </Fragment>
   );
 }
