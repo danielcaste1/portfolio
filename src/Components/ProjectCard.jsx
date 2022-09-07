@@ -11,10 +11,10 @@ function ProjectCard({ title, description, picture, code, url }) {
       </div>
       <p className="project__description"> {description} </p>
       <div className="project__cta">
-        <a rel="noopener" target="_blank" className="project__code" href={code}>
+        <a rel="noreferrer" target="_blank" className="project__code" href={code}>
           <VscCode></VscCode>
         </a>
-        <a rel="noopener" target="_blank" className="project__view" href={url}>
+        <a rel="noreferrer" target="_blank" className="project__view" href={url}>
           <MdRemoveRedEye></MdRemoveRedEye>
         </a>
       </div>
