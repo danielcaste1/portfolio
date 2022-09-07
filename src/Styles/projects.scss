@@ -1,0 +1,82 @@
+.projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .projects__title{
+        @include title($color-primary-text);
+    }
+    .projects__grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        place-items: center;
+        margin: 2rem auto;
+        .project {
+            position: relative;
+            height: 32rem;
+            width: 32rem;
+            overflow: hidden;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            &__title {
+                display: flex;
+                justify-content: center;
+                background-color: $color-secondary;
+                padding: 1rem;
+                margin: 1rem auto;
+                @include main-paragraph($color-primary-text);
+            }
+            &__description {
+                display: flex;
+                justify-content: center;
+                background-color: $color-secondary;
+                padding: 1rem;
+                margin: 1rem ;
+                width: 80%;
+                text-align: center;
+                @include info-paragraph($color-primary-text);
+            }
+            &__img {
+                position: absolute;
+                top: 0;
+                width: 320px;
+                height: 320px;
+                overflow: hidden;
+                background-color: $color-secondary-text;
+                z-index: -1;
+                
+                img{
+                    transition: 300ms;
+                    transform: translate(-25%,-50%);
+                    filter: opacity(.5) blur(.2rem);
+                    width: 150%;
+                    
+                }                
+            }
+            &__cta{
+                display: flex;
+                .project__code, .project__view {
+                    margin: 1rem;
+                    font-size: $lg;
+                    color: $color-invert-text;
+                    &:hover{
+                        color: $color-alternative;
+                    }
+                }
+            }
+            &:hover{
+                .project__img {
+                    img {
+                        filter: opacity(.1) blur(.2rem);
+                    }
+                }
+            }
+        }
+    }
+    
+}

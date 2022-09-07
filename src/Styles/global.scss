@@ -9,6 +9,7 @@
   $color-secondary-text: #464853;
   $color-optional-text: #757678;
   $color-altenative-text: #f2ddff;
+  $color-invert-text: #ffffff;
 //Fonts
   //typography
   $font-primary: 'Barlow Condensed', sans-serif;
@@ -30,24 +31,32 @@
 
 
 //mixins
-@mixin title {
+@mixin title($color) {
   font-size: $xlg;
   font-family: $font-primary;
   font-weight: $bold;
-  color: $color-primary-text;
+  color: $color;
 }
 
-@mixin main-paragraph {
+@mixin main-paragraph($color) {
   font-size: $md;
   font-family: $font-secondary;
   font-weight: $bold;
-  color: $color-primary-text;
+  color: $color;
+}
+
+@mixin info-paragraph($color) {
+  font-size: $sm;
+  font-family: $font-secondary;
+  font-weight: $normal;
+  color: $color;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 html {

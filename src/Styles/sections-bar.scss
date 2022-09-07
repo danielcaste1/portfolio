@@ -1,7 +1,21 @@
 .sections__bar{
     display: flex;
     justify-content: space-evenly;
-
+    align-items: center;
     margin: 3rem auto;
     padding: 3rem 0;
+    height: 100vh;
+    a {
+        @include main-paragraph($color-primary-text);
+        text-decoration: none;
+        background-color: $color-invert-text;
+        color: $color-primary-text;
+        padding: 1rem 1.6rem;
+        border: 2px solid $color-secondary;
+        &:hover {
+            background-color: $color-secondary;
+            border-color: $color-secondary;
+            color: $color-invert-text;
+        }
+    }
 }

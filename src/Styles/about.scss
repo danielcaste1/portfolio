@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     .about__title {
-        font-size: 5rem;
+        @include title($color-primary-text);
     }
 
     .about__description { 

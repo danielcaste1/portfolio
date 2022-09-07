@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 html {
@@ -14,9 +15,10 @@ html {
 }
 
 .presentation {
+  height: 100vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  gap: 5rem;
   align-items: center;
   margin: 5rem auto;
   padding: 5rem 0;
@@ -39,7 +41,7 @@ html {
   font-size: 2.2rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  color: #000000;
+  color: #757678;
 }
 .presentation .presentation__portrait {
   position: relative;
@@ -49,23 +51,51 @@ html {
 }
 .presentation .presentation__portrait .portrait__img {
   position: absolute;
+  z-index: 2;
   height: 320px;
 }
 .presentation .presentation__portrait .portrait__img img {
   max-height: 100%;
 }
 .presentation .presentation__portrait .portrait__figure {
-  width: 320px;
-  height: 320px;
+  z-index: -2;
+  width: 280px;
+  height: 280px;
   background-color: #c670ff;
-  border-radius: 50%;
+  animation: spin 100s linear 0s infinite forwards;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .sections__bar {
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
   margin: 3rem auto;
   padding: 3rem 0;
+  height: 100vh;
+}
+.sections__bar a {
+  font-size: 2.2rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: #000000;
+  text-decoration: none;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 1rem 1.6rem;
+  border: 2px solid #ffe047;
+}
+.sections__bar a:hover {
+  background-color: #ffe047;
+  border-color: #ffe047;
+  color: #ffffff;
 }
 
 .about {
@@ -74,7 +104,10 @@ html {
   align-items: center;
 }
 .about .about__title {
-  font-size: 5rem;
+  font-size: 3.6rem;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 600;
+  color: #000000;
 }
 .about .about__description {
   padding: 2rem;
@@ -89,6 +122,89 @@ html {
 .about .about__description .about__info {
   font-size: 1.6rem;
   padding: 2rem;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.projects .projects__title {
+  font-size: 3.6rem;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 600;
+  color: #000000;
+}
+.projects .projects__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  place-items: center;
+  margin: 2rem auto;
+}
+.projects .projects__grid .project {
+  position: relative;
+  height: 32rem;
+  width: 32rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.projects .projects__grid .project__title {
+  display: flex;
+  justify-content: center;
+  background-color: #ffe047;
+  padding: 1rem;
+  margin: 1rem auto;
+  font-size: 2.2rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: #000000;
+}
+.projects .projects__grid .project__description {
+  display: flex;
+  justify-content: center;
+  background-color: #ffe047;
+  padding: 1rem;
+  margin: 1rem;
+  width: 80%;
+  text-align: center;
+  font-size: 1.8rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: #000000;
+}
+.projects .projects__grid .project__img {
+  position: absolute;
+  top: 0;
+  width: 320px;
+  height: 320px;
+  overflow: hidden;
+  background-color: #464853;
+  z-index: -1;
+}
+.projects .projects__grid .project__img img {
+  transition: 300ms;
+  transform: translate(-25%, -50%);
+  filter: opacity(0.5) blur(0.2rem);
+  width: 150%;
+}
+.projects .projects__grid .project__cta {
+  display: flex;
+}
+.projects .projects__grid .project__cta .project__code, .projects .projects__grid .project__cta .project__view {
+  margin: 1rem;
+  font-size: 2.8rem;
+  color: #ffffff;
+}
+.projects .projects__grid .project__cta .project__code:hover, .projects .projects__grid .project__cta .project__view:hover {
+  color: #35e95f;
+}
+.projects .projects__grid .project:hover .project__img img {
+  filter: opacity(0.1) blur(0.2rem);
 }
 
 /*# sourceMappingURL=styles.css.map */

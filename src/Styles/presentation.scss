@@ -1,7 +1,8 @@
 .presentation {
+  height: 100vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  gap: 5rem;
   align-items: center;
   margin: 5rem auto;
   padding: 5rem 0;
@@ -11,12 +12,12 @@
     align-items: flex-end;
     .presentation__title {
       text-align: end;
-      @include title;
+      @include title($color-primary-text);
     }
     .presentation__paragraph {
       text-align: end;
       max-width: 50%;
-      @include main-paragraph;
+      @include main-paragraph($color-optional-text);
     }
   }
 
@@ -27,16 +28,23 @@
     margin: 0 2rem;
     .portrait__img {
       position: absolute;
+      z-index: 2;
       height: 320px;
       img {
         max-height: 100%;
       }
     }
     .portrait__figure {
-      width: 320px;
-      height: 320px;
+      z-index: -2;
+      width: 280px;
+      height: 280px;
       background-color: #c670ff;
-      border-radius: 50%;
+      animation: spin 100s linear 0s infinite forwards;
+
+    }
+    @keyframes spin {
+      from{transform: rotate(0deg);}
+      to{transform: rotate(360deg);}
     }
   }
 }
