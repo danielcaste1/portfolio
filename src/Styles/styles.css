@@ -37,7 +37,7 @@ html {
 }
 .presentation__info .presentation__paragraph {
   text-align: end;
-  max-width: 50%;
+  max-width: 100%;
   font-size: 2.2rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
@@ -82,19 +82,23 @@ html {
   align-items: center;
   width: 100vw;
   z-index: 3;
-  background-color: #ffe047;
+  opacity: 0.8;
+  background-color: #ffffff;
+}
+.sections__bar:hover {
+  opacity: 1;
 }
 .sections__bar a {
   font-size: 2.2rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  color: #464646;
+  color: #ffe047;
+  text-transform: uppercase;
   text-decoration: none;
-  color: #6b6b6e;
   padding: 1rem 1.6rem;
 }
 .sections__bar a:hover {
-  color: #464646;
+  color: #6b6b6e;
 }
 
 .about {
@@ -122,7 +126,11 @@ html {
   color: #6b6b6e;
 }
 .about .about__description .about__image {
+  display: flex;
   min-width: 320px;
+  padding: 1rem;
+  border: 2px solid #ffe047;
+  box-shadow: 0px 20px 0px #ffe047;
 }
 .about .about__description .about__image img {
   width: 100%;
@@ -151,6 +159,7 @@ html {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 5rem;
+  padding: 10rem;
   place-items: center;
   margin: 3rem auto;
 }
@@ -161,7 +170,7 @@ html {
   overflow: hidden;
   padding: 1rem;
   border: 2px solid #c670ff;
-  box-shadow: 12px 12px 0px #c670ff;
+  box-shadow: 0px 20px 0px #c670ff;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -191,23 +200,6 @@ html {
   font-weight: 400;
   color: #464646;
 }
-.projects .projects__grid .project__img {
-  position: absolute;
-  width: 320px;
-  height: 320px;
-  overflow: hidden;
-  background-color: #ffffff;
-  z-index: -1;
-}
-.projects .projects__grid .project__img img {
-  transition: 300ms;
-  transform: translate(-25%, -50%);
-  filter: opacity(0) blur(0.2rem);
-  width: 150%;
-}
-.projects .projects__grid .project:hover .project__img img {
-  filter: opacity(0.1) blur(0.2rem);
-}
 .projects .projects__grid .project__cta {
   display: flex;
 }
@@ -217,15 +209,14 @@ html {
   font-size: 2.8rem;
   color: #c670ff;
 }
-.projects .projects__grid .project__cta .project__code:hover,
-.projects .projects__grid .project__cta .project__view:hover {
-  color: #35e95f;
-}
 
 .studies {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  min-height: 100vh;
+  padding-top: 10rem;
 }
 .studies__title {
   text-align: center;
@@ -244,35 +235,72 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 3rem 1rem;
+  padding: 3rem 2rem;
   border: 2px solid #35e95f;
+  box-shadow: 0px 20px 0px #35e95f;
 }
 .studies__grid .study__title {
+  font-size: 2.2rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: #35e95f;
+}
+.studies__grid .study__institution {
+  margin: 1rem;
   line-height: 3rem;
   font-size: 1.8rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  color: #35e95f;
+  color: #6b6b6e;
 }
-.studies__grid .study__institution {
-  line-height: 1.5rem;
-  font-size: 1.2rem;
+.studies__grid .study__icon {
+  margin: 2rem;
+  max-width: 60px;
+}
+.studies__grid .study__icon img {
+  width: 100%;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding-top: 10rem;
+}
+.contact__title {
+  text-align: center;
+  font-size: 3.6rem;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 600;
+  color: #464646;
+}
+.contact__items {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 10rem;
+}
+.contact__items .contact__item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 3rem 0;
+}
+.contact__items .contact__item svg, .contact__items .contact__item p, .contact__items .contact__item a {
+  margin: 0 2rem;
+  line-height: 3rem;
+  font-size: 1.8rem;
   font-family: "Montserrat", sans-serif;
-  font-weight: 300;
-  color: #35e95f;
+  font-weight: 400;
+  color: #757678;
 }
-.studies__grid .study svg {
-  font-size: 2.8rem;
-  color: #35e95f;
-  animation: spin 20s linear infinite;
-}
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.contact__items .contact__item svg {
+  font-size: 2.2rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: #757678;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -16,7 +16,7 @@
     }
     .presentation__paragraph {
       text-align: end;
-      max-width: 50%;
+      max-width: 100%;
       @include main-paragraph($color-optional-text);
     }
   }

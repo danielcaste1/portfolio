@@ -5,17 +5,19 @@ import { NavigationBar } from "./Components/NavigationBar";
 import { AboutMe } from "./Components/AboutMe";
 import { Projects } from "./Components/Projects";
 import { Studies } from "./Components/Studies";
+import { Contact } from "./Components/Contact";
+
+import { AiFillLinkedin } from "react-icons/ai";
+import { AiFillGithub } from "react-icons/ai";
+import { AiFillMail } from "react-icons/ai";
+import { AiOutlinePhone } from "react-icons/ai";
 
 function App() {
   const title = "Hello!";
   const description =
-    "My Name is Daniel Castellanos, I'm a Junior Web Developer";
+    "I'm Daniel Castellanos and I'm a Web Developer, UI/UX Designer";
 
   const sections = [
-    {
-      name: "About Me",
-      id: "about",
-    },
     {
       name: "Projects",
       id: "projects",
@@ -23,6 +25,10 @@ function App() {
     {
       name: "Studies",
       id: "studies",
+    },
+    {
+      name: "About Me",
+      id: "about",
     },
     {
       name: "Contact",
@@ -62,19 +68,44 @@ function App() {
     },
   ];
 
-  //Projects
+  //Studies
   const studies = [
     {
       institution: "SENA",
-      title: "Systems Technician"
+      title: "Systems Technician",
+      icon: "sena"
     },
     {
       institution: "Sergio Arboleda University",
-      title: "MinTic Mision 2022 Tripulant"
+      title: "MinTic Mision Tripulant",
+      icon: "sergio"
     },
     {
       institution: "Platzi",
-      title: "Frontend Developer"
+      title: "Frontend Developer",
+      icon: "platzi"
+    },
+  ]
+
+  //Contacts
+  const contacts = [
+    {
+      icon: AiFillLinkedin,
+      name : "Daniel Alejandro Castellanos Aroca",
+      url: "https://www.linkedin.com/in/daniel-alejandro-castellanos-aroca-a62a3721a/",
+    },
+    {
+      icon: AiFillGithub,
+      name : "danielcaste1",
+      url: "https://github.com/danielcaste1",
+    },
+    {
+      icon: AiFillMail,
+      name: "caste0322@gmail.com"
+    },
+    {
+      icon: AiOutlinePhone,
+      name: "+57 3013500536"
     },
   ]
 
@@ -82,9 +113,10 @@ function App() {
     <Fragment>
       <PresentationCard title={title} description={description} />
       <NavigationBar sections={sections} />
-      <AboutMe />
       <Projects projects={projects} />
       <Studies studies={studies}/>
+      <AboutMe />
+      <Contact contacts={contacts} />
     </Fragment>
   );
 }

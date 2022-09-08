@@ -12,7 +12,6 @@ function Projects({ projects }) {
               key={project.url}
               title={project.title}
               description={project.description}
-              picture={project.picture}
               code={project.code}
               url={project.url}
             />

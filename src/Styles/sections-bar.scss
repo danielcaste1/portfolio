@@ -7,14 +7,18 @@
   align-items: center;
   width: 100vw;
   z-index: 3;
-  background-color: $color-secondary;
+  opacity: .8;
+  background-color: $color-invert-text;
+  &:hover{
+    opacity: 1;
+  }
   a {
-    @include main-paragraph($color-primary-text);
+    @include main-paragraph($color-secondary);
+    text-transform: uppercase;
     text-decoration: none;
-    color: $color-secondary-text;
     padding: 1rem 1.6rem;
     &:hover {
-      color: $color-primary-text;
+      color: $color-secondary-text;
     }
   }
 }
