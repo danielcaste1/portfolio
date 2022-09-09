@@ -13,7 +13,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 5rem;
-    padding: 10rem;
+    padding-top: 10rem;
     place-items: center;
     margin: 3rem auto;
     .project {
@@ -22,8 +22,9 @@
       width: 26rem;
       overflow: hidden;
       padding: 1rem;
-      border: 2px solid $color-primary;
-      box-shadow: 0px 20px 0px $color-primary;
+      border: 1px solid $color-primary;
+      border-radius: 2rem;
+      box-shadow: 6px 6px 0px $color-primary;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -32,10 +33,9 @@
       &__title {
         display: flex;
         justify-content: center;
-        background-color: $color-primary;
         padding: 1rem;
         margin: 1rem auto;
-        @include main-paragraph($color-invert-text);
+        @include main-paragraph($color-primary);
       }
       &__description {
         display: flex;

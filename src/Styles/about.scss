@@ -13,13 +13,12 @@
     padding: 0rem 2rem;
     display: flex;
     align-items: center;
-    @include info-paragraph($color-secondary-text);
+    @include info-paragraph($color-primary-text);
     .about__image {
       display: flex;
       min-width: 320px;
-      padding: 1rem;
-      border: 2px solid $color-secondary;
-      box-shadow: 0px 20px 0px $color-secondary;
+      border-radius: 2rem;
+      overflow: hidden;
       img {
         width: 100%;
       }

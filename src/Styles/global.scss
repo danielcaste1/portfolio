@@ -1,15 +1,14 @@
 //Colors
 //Main Palette
-$color-primary: #c670ff;
-$color-secondary: #ffe047;
-$color-alternative: #35e95f;
+$color-primary: #5d97d1;
+$color-secondary: #083951;
 
 //Texts
 $color-primary-text: #464646;
 $color-secondary-text: #6b6b6e;
 $color-optional-text: #757678;
 $color-altenative-text: #f2ddff;
-$color-invert-text: #ffffff;
+$color-invert-text: #f9f6f2;
 //Fonts
 //typography
 $font-primary: "Barlow Condensed", sans-serif;
@@ -69,6 +68,10 @@ $xlight: 200;
 
 html {
   font-size: 62.5%;
+}
+
+body{
+  background-color: $color-invert-text;
 }
 
 .container {
