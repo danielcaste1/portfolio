@@ -4,7 +4,7 @@ import { ProjectCard } from "./ProjectCard";
 function Projects({ projects }) {
   return (
     <div className="projects container" id="projects">
-      <h3 className="projects__title" >Projects</h3>
+      <h3 className="projects__title fade-in" >Projects</h3>
       <div className="projects__grid">
         {projects.map((project) => {
           return (

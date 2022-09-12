@@ -2,7 +2,7 @@ import React from "react";
 
 function ContactItem({ icon, url, name }) {
   return (
-    <div className="contact__item">
+    <div className="contact__item fade-in">
         <div className="contact__icon">
             {icon()}
         </div>

@@ -1,54 +1,58 @@
 .presentation {
-  height: 100vh;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 5rem;
+  display: flex;
   align-items: center;
-  margin: 5rem auto;
-  padding: 5rem 0;
-  &__info {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    .presentation__title {
-      text-align: end;
-      @include title($color-primary-text);
-    }
-    .presentation__paragraph {
-      text-align: end;
-      max-width: 100%;
-      @include main-paragraph($color-optional-text);
-    }
-  }
+  justify-content: center;
+  height: 100vh;
+  max-width: none !important;
+  .presentation__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+    align-items: center;
+    width: 100%;
+    margin: 5rem auto;
+    .presentation__info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
 
-  .presentation__portrait {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    margin: 0 2rem;
-    .portrait__img {
-      position: absolute;
-      
-      z-index: 2;
-      height: 320px;
-
-      img {
-        max-height: 100%;
+      .presentation__title {
+        text-align: end;
+        @include title($color-primary-text);
+      }
+      .presentation__paragraph {
+        text-align: end;
+        max-width: 80%;
+        @include main-paragraph($color-primary-text);
+      }
+      .presentation__paragraph--position {
+        text-align: end;
+        max-width: 80%;
+        @include main-paragraph($color-primary);
       }
     }
-    .portrait__figure {
-      z-index: -2;
-      width: 280px;
-      height: 280px;
-      background-color: $color-primary;
-      animation: spin 100s linear 0s infinite forwards;
-    }
-    @keyframes spin {
-      from {
-        transform: rotate(0deg);
+
+    .presentation__portrait {
+
+      position: relative;
+      display: flex;
+      justify-content: flex-start;
+      margin: 0 2rem;
+      .portrait__img {
+        position: absolute;
+
+        z-index: 2;
+        height: 280px;
+
+        img {
+          transform: translateX(10px);
+          max-height: 100%;
+        }
       }
-      to {
-        transform: rotate(360deg);
+      .portrait__figure {
+        z-index: -2;
+        width: 280px;
+        height: 280px;
       }
     }
   }

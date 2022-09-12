@@ -4,7 +4,7 @@ import { ContactItem } from "./ContactItem";
 function Contact({ contacts }) {
   return (
     <div className="contact container" id="contact">
-      <span className="contact__title">Contact</span>
+      <span className="contact__title fade-in">Contact</span>
       <div className="contact__items">
         {contacts.map((contact) => {
           return (

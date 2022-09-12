@@ -12,10 +12,17 @@ import { AiFillGithub } from "react-icons/ai";
 import { AiFillMail } from "react-icons/ai";
 import { AiOutlinePhone } from "react-icons/ai";
 
+import { containers, observer } from "./FadeInFadeOut";
+
 function App() {
+
+  containers.forEach((container) => {
+    observer.observe(container);
+  });
+
   const title = "Hello!";
-  const description =
-    "I'm Daniel Castellanos and I'm a Web Developer, UI/UX Designer";
+  const description = "I'm Daniel Castellanos and I'm a";
+  const position = "Frontend Developer";
 
   const sections = [
     {
@@ -73,48 +80,52 @@ function App() {
     {
       institution: "SENA",
       title: "Systems Technician",
-      icon: "sena"
+      icon: "sena",
     },
     {
       institution: "Sergio Arboleda University",
       title: "MinTic Mision Tripulant",
-      icon: "sergio"
+      icon: "sergio",
     },
     {
       institution: "Platzi",
       title: "Frontend Developer",
-      icon: "platzi"
+      icon: "platzi",
     },
-  ]
+  ];
 
   //Contacts
   const contacts = [
     {
       icon: AiFillLinkedin,
-      name : "Daniel Alejandro Castellanos Aroca",
+      name: "Daniel Alejandro Castellanos Aroca",
       url: "https://www.linkedin.com/in/daniel-alejandro-castellanos-aroca-a62a3721a/",
     },
     {
       icon: AiFillGithub,
-      name : "danielcaste1",
+      name: "danielcaste1",
       url: "https://github.com/danielcaste1",
     },
     {
       icon: AiFillMail,
-      name: "caste0322@gmail.com"
+      name: "danielcastellanos.dev@gmail.com",
     },
     {
       icon: AiOutlinePhone,
-      name: "+57 3013500536"
+      name: "+57 3013500536",
     },
-  ]
+  ];
 
   return (
     <Fragment>
-      <PresentationCard title={title} description={description} />
+      <PresentationCard
+        title={title}
+        description={description}
+        position={position}
+      />
       <NavigationBar sections={sections} />
       <Projects projects={projects} />
-      <Studies studies={studies}/>
+      <Studies studies={studies} />
       <AboutMe />
       <Contact contacts={contacts} />
     </Fragment>

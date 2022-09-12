@@ -8,14 +8,19 @@
   width: 100vw;
   z-index: 3;
   opacity: 1;
-  background-color: $color-invert-text;
-  &:hover{
+  background-color: $color-primary;
+  &:hover {
     opacity: 1;
   }
   a {
-    @include main-paragraph($color-secondary);
+    @include main-paragraph($color-invert-text);
+    
     text-transform: uppercase;
     text-decoration: none;
     padding: 1rem 1.6rem;
+    transition: 200ms;
+    &:hover {
+      transform: translateY(-2px);
+    }
   }
 }

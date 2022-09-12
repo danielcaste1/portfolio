@@ -1,10 +1,10 @@
 //Colors
 //Main Palette
-$color-primary: #5d97d1;
-$color-secondary: #083951;
+$color-primary: #63b5f7;
+$color-secondary: #0d2d45;
 
 //Texts
-$color-primary-text: #464646;
+$color-primary-text: #2f2f2f;
 $color-secondary-text: #6b6b6e;
 $color-optional-text: #757678;
 $color-altenative-text: #f2ddff;
@@ -77,4 +77,16 @@ body{
 .container {
   max-width: 1080px;
   margin: 0 auto;
+}
+
+
+.fade-in{
+  opacity: 0;
+  scale: 0.8;
+  transition: 300ms ease-in;
+}
+
+.fade-in.appear{
+  scale: 1;
+  opacity: 1;
 }

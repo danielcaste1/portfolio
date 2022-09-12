@@ -47,12 +47,17 @@
         @include info-paragraph($color-primary-text);
       }
       &__cta {
+        
         display: flex;
         .project__code,
         .project__view {
           margin: 1rem;
           font-size: $lg;
           color: $color-primary;
+          transition: 200ms;
+          &:hover{
+            transform: translateY(-2px);
+          }
         }
       }
       

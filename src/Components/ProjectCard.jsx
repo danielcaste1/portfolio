@@ -4,8 +4,8 @@ import { MdRemoveRedEye } from "react-icons/md";
 
 function ProjectCard({ title, description, code, url }) {
   return (
-    <div className="project">
-      <span className="project__title"> {title} </span>
+    <div className="project fade-in">
+      <span className="project__title "> {title} </span>
 
       <p className="project__description"> {description} </p>
       <div className="project__cta">

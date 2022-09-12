@@ -3,7 +3,7 @@ import { StudyCard } from "./StudyCard";
 function Studies({ studies }) {
   return (
     <div id="studies" className="studies container">
-      <span className="studies__title"> Studies </span>
+      <span className="studies__title fade-in"> Studies </span>
       <div className="studies__grid">
         {studies.map((study) => (
           <StudyCard

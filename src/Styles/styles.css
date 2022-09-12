@@ -18,63 +18,79 @@ body {
   margin: 0 auto;
 }
 
+.fade-in {
+  opacity: 0;
+  scale: 0.8;
+  transition: 300ms ease-in;
+}
+
+.fade-in.appear {
+  scale: 1;
+  opacity: 1;
+}
+
 .presentation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 100vh;
+  max-width: none !important;
+}
+.presentation .presentation__content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 5rem;
   align-items: center;
+  width: 100%;
   margin: 5rem auto;
-  padding: 5rem 0;
 }
-.presentation__info {
+.presentation .presentation__content .presentation__info {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
-.presentation__info .presentation__title {
+.presentation .presentation__content .presentation__info .presentation__title {
   text-align: end;
   font-size: 3.6rem;
   font-family: "Barlow Condensed", sans-serif;
   font-weight: 600;
-  color: #464646;
+  color: #2f2f2f;
 }
-.presentation__info .presentation__paragraph {
+.presentation .presentation__content .presentation__info .presentation__paragraph {
   text-align: end;
-  max-width: 100%;
+  max-width: 80%;
   font-size: 2.2rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  color: #757678;
+  color: #2f2f2f;
 }
-.presentation .presentation__portrait {
+.presentation .presentation__content .presentation__info .presentation__paragraph--position {
+  text-align: end;
+  max-width: 80%;
+  font-size: 2.2rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: #63b5f7;
+}
+.presentation .presentation__content .presentation__portrait {
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   margin: 0 2rem;
 }
-.presentation .presentation__portrait .portrait__img {
+.presentation .presentation__content .presentation__portrait .portrait__img {
   position: absolute;
   z-index: 2;
-  height: 320px;
+  height: 280px;
 }
-.presentation .presentation__portrait .portrait__img img {
+.presentation .presentation__content .presentation__portrait .portrait__img img {
+  transform: translateX(10px);
   max-height: 100%;
 }
-.presentation .presentation__portrait .portrait__figure {
+.presentation .presentation__content .presentation__portrait .portrait__figure {
   z-index: -2;
   width: 280px;
   height: 280px;
-  background-color: #5d97d1;
-  animation: spin 100s linear 0s infinite forwards;
-}
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 .sections__bar {
@@ -87,7 +103,7 @@ body {
   width: 100vw;
   z-index: 3;
   opacity: 1;
-  background-color: #f9f6f2;
+  background-color: #63b5f7;
 }
 .sections__bar:hover {
   opacity: 1;
@@ -96,10 +112,14 @@ body {
   font-size: 2.2rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  color: #083951;
+  color: #f9f6f2;
   text-transform: uppercase;
   text-decoration: none;
   padding: 1rem 1.6rem;
+  transition: 200ms;
+}
+.sections__bar a:hover {
+  transform: translateY(-2px);
 }
 
 .about {
@@ -113,7 +133,7 @@ body {
   font-size: 3.6rem;
   font-family: "Barlow Condensed", sans-serif;
   font-weight: 600;
-  color: #464646;
+  color: #2f2f2f;
 }
 .about .about__description {
   margin: 3rem auto;
@@ -124,7 +144,7 @@ body {
   font-size: 1.8rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  color: #464646;
+  color: #2f2f2f;
 }
 .about .about__description .about__image {
   display: flex;
@@ -153,7 +173,7 @@ body {
   font-size: 3.6rem;
   font-family: "Barlow Condensed", sans-serif;
   font-weight: 600;
-  color: #464646;
+  color: #2f2f2f;
 }
 .projects .projects__grid {
   display: grid;
@@ -169,9 +189,9 @@ body {
   width: 26rem;
   overflow: hidden;
   padding: 1rem;
-  border: 1px solid #5d97d1;
+  border: 1px solid #63b5f7;
   border-radius: 2rem;
-  box-shadow: 6px 6px 0px #5d97d1;
+  box-shadow: 6px 6px 0px #63b5f7;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -185,7 +205,7 @@ body {
   font-size: 2.2rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  color: #5d97d1;
+  color: #63b5f7;
 }
 .projects .projects__grid .project__description {
   display: flex;
@@ -198,7 +218,7 @@ body {
   font-size: 1.8rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  color: #464646;
+  color: #2f2f2f;
 }
 .projects .projects__grid .project__cta {
   display: flex;
@@ -207,7 +227,12 @@ body {
 .projects .projects__grid .project__cta .project__view {
   margin: 1rem;
   font-size: 2.8rem;
-  color: #5d97d1;
+  color: #63b5f7;
+  transition: 200ms;
+}
+.projects .projects__grid .project__cta .project__code:hover,
+.projects .projects__grid .project__cta .project__view:hover {
+  transform: translateY(-2px);
 }
 
 .studies {
@@ -223,7 +248,7 @@ body {
   font-size: 3.6rem;
   font-family: "Barlow Condensed", sans-serif;
   font-weight: 600;
-  color: #464646;
+  color: #2f2f2f;
 }
 .studies__grid {
   display: grid;
@@ -243,16 +268,16 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid #5d97d1;
+  border: 1px solid #63b5f7;
   border-radius: 2rem;
-  box-shadow: 6px 6px 0px #5d97d1;
+  box-shadow: 6px 6px 0px #63b5f7;
 }
 .studies__grid .study__title {
   text-align: center;
   font-size: 2.2rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  color: #5d97d1;
+  color: #63b5f7;
 }
 .studies__grid .study__institution {
   text-align: center;
@@ -284,7 +309,7 @@ body {
   font-size: 3.6rem;
   font-family: "Barlow Condensed", sans-serif;
   font-weight: 600;
-  color: #464646;
+  color: #2f2f2f;
 }
 .contact__items {
   display: flex;
