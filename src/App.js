@@ -1,5 +1,5 @@
 import "./Styles/styles.css";
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 import { PresentationCard } from "./Components/Presentation";
 import { NavigationBar } from "./Components/NavigationBar";
 import { AboutMe } from "./Components/AboutMe";
@@ -12,13 +12,30 @@ import { AiFillGithub } from "react-icons/ai";
 import { AiFillMail } from "react-icons/ai";
 import { AiOutlinePhone } from "react-icons/ai";
 
-import { containers, observer } from "./FadeInFadeOut";
-
 function App() {
+  useEffect(() => {
+    const containers = document.querySelectorAll(".fade-in");
 
-  containers.forEach((container) => {
-    observer.observe(container);
-  });
+    const options = {
+      treshold: 1,
+      rootMargin: "0px 0px -100px 0px",
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
+        } else {
+          entry.target.classList.toggle("appear", entry.isIntersecting);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, options);
+
+    containers.forEach((container) => {
+      observer.observe(container);
+    });
+  }, []);
 
   const title = "Hello!";
   const description = "I'm Daniel Castellanos and I'm a";
