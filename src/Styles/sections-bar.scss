@@ -24,3 +24,10 @@
     }
   }
 }
+
+
+@media screen and (max-width: 590px) {
+  .sections__bar {
+    display: none;
+  }
+}

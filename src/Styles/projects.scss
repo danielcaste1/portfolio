@@ -5,7 +5,6 @@
   align-items: center;
   min-height: 100vh;
   padding-top: 10rem;
-  margin: 5rem auto;
   .projects__title {
     @include title($color-primary-text);
   }
@@ -47,7 +46,6 @@
         @include info-paragraph($color-primary-text);
       }
       &__cta {
-        
         display: flex;
         .project__code,
         .project__view {
@@ -55,12 +53,27 @@
           font-size: $lg;
           color: $color-primary;
           transition: 200ms;
-          &:hover{
+          &:hover {
             transform: translateY(-2px);
           }
         }
       }
-      
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .projects {
+    .projects__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .projects {
+    .projects__grid {
+      grid-template-columns: 1fr;
     }
   }
 }

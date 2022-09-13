@@ -3,22 +3,26 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
+  padding-top: 10rem;
   .about__title {
     @include title($color-primary-text);
   }
 
   .about__description {
-    margin: 3rem auto;
-    padding: 0rem 2rem;
+    
+    padding: 3rem 2rem;
     display: flex;
     align-items: center;
     @include info-paragraph($color-primary-text);
+    margin: 3rem auto;
     .about__image {
       display: flex;
-      min-width: 320px;
+      max-width: 320px;
       border-radius: 2rem;
       overflow: hidden;
+      margin: 1rem;
+      margin-bottom: 3rem;
       img {
         width: 100%;
       }
@@ -26,6 +30,13 @@
     .about__info {
       font-size: 1.6rem;
       padding: 0rem 2rem;
+    }
+  }
+}
+@media screen and (max-width: 900px) {
+  .about {
+    .about__description {
+      flex-direction: column;
     }
   }
 }
