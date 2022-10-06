@@ -9,11 +9,21 @@ function ProjectCard({ title, description, code, url }) {
 
       <p className="project__description"> {description} </p>
       <div className="project__cta">
-        <a rel="noreferrer" target="_blank" className="project__code" href={code}>
-          <VscCode></VscCode>
-        </a>
-        <a rel="noreferrer" target="_blank" className="project__view" href={url}>
+        <a
+          rel="noreferrer"
+          target="_blank"
+          className="project__view"
+          href={url}
+        >
           <MdRemoveRedEye></MdRemoveRedEye>
+        </a>
+        <a
+          rel="noreferrer"
+          target="_blank"
+          className="project__code"
+          href={code}
+        >
+          <VscCode></VscCode>
         </a>
       </div>
     </div>

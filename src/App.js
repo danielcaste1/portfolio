@@ -63,6 +63,13 @@ function App() {
   //Projetcs
   const projects = [
     {
+      title: "GeniusAPI",
+      description: "App to find songs using the GeniusAPI (Not finished)",
+      picture: "./imgs/todo.png",
+      code: "https://github.com/danielcaste1/geniusAPP",
+      url: "https://geniusapi.netlify.app/"
+    },
+    {
       title: "To Do Machine",
       description: "Made with ReactJS",
       picture: "./imgs/todo.png",
