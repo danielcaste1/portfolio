@@ -12,6 +12,7 @@ function Contact({ contacts }) {
               key={contact.name}
               icon={contact.icon}
               name={contact.name}
+              url={contact.url}
             />
           );
         })}
