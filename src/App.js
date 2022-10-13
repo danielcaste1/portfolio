@@ -64,7 +64,7 @@ function App() {
   const projects = [
     {
       title: "GeniusAPI",
-      description: "App to find songs using the GeniusAPI (Not finished)",
+      description: "App to find songs using the GeniusAPI",
       picture: "./imgs/todo.png",
       code: "https://github.com/danielcaste1/geniusAPP",
       url: "https://geniusapi.netlify.app/"
