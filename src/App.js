@@ -63,7 +63,7 @@ function App() {
   //Projetcs
   const projects = [
     {
-      title: "GeniusAPI",
+      title: "GeniusAPP",
       description: "App to find songs using the GeniusAPI",
       picture: "./imgs/todo.png",
       code: "https://github.com/danielcaste1/geniusAPP",
