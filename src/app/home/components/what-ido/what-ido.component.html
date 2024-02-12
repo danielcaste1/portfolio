@@ -1,0 +1,20 @@
+<section class="what-i-do content">
+  <h3 class="font-baijamjuree h4 text-black-primary">What I do</h3>
+  <div class="tools">
+    <div class="main-tools flex flex-col">
+      <div *ngFor="let tool of mainTools" class="tool flex">
+        <div class="logo flex flex-col">
+          <img [src]="'assets/images/' + tool.icon" alt="" />
+          <div class="font-baijamjuree h6 text-gradient">
+            {{ tool.name }}
+          </div>
+        </div>
+        <div>
+          <div class="font-inter para1 text-black-secondary">
+            {{ tool.description }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

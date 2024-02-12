@@ -1,0 +1,16 @@
+.hero {
+  margin-top: 48px;
+  padding-top: 48px;
+  padding-bottom: 120px;
+  justify-content: space-between;
+  gap: 24px;
+}
+.text {
+  width: 60%;
+  justify-content: center;
+  gap: 32px;
+}
+
+.description {
+  line-height: 32px;
+}

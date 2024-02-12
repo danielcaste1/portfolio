@@ -1,0 +1,19 @@
+<header>
+  <div class="flex content header-content">
+    <ul class="flex font-inter para1">
+      <li *ngFor="let link of headerLinks" class="text-black-primary">
+        <a
+          class="text-black-primary"
+          [routerLink]="[link.route]"
+          routerLinkActive="active"
+        >
+          {{ link.name }}
+        </a>
+      </li>
+    </ul>
+
+    <button [routerLink]="['/contact']" class="button-primary">
+      LET'S TALK
+    </button>
+  </div>
+</header>

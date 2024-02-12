@@ -1,0 +1,14 @@
+.header-content {
+  justify-content: space-between;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  ul {
+    list-style: none;
+    gap: 12px;
+    li {
+      a.active {
+        font-weight: 700;
+      }
+    }
+  }
+}

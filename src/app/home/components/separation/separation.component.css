@@ -1,0 +1,6 @@
+.separation-line {
+  content: "";
+  background: linear-gradient(to right, #b16cea, #ff5e69, #ff8a56, #ffa84b);
+  height: 48px;
+  width: 100%;
+}

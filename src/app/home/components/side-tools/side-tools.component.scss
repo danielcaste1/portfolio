@@ -1,0 +1,24 @@
+@import "src/assets/styles/variables.scss";
+
+.side-tools {
+  .title {
+    margin: 0 auto;
+    text-align: center;
+  }
+  margin: 64px auto;
+  .tools {
+    margin-top: 24px;
+    justify-content: center;
+    gap: 24px;
+    .tool {
+      border-radius: 24px;
+      background-color: $white-secondary;
+      padding: 12px;
+      min-width: 80px;
+      max-width: 80px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

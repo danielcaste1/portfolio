@@ -1,0 +1,92 @@
+.flex {
+  display: flex;
+}
+.flex-row {
+  flex-direction: row;
+}
+.flex-col {
+  flex-direction: column;
+}
+
+.font-satoshi {
+  font-family: "satoshi", sans-serif;
+}
+.font-baijamjuree {
+  font-family: "Bai Jamjuree", sans-serif;
+}
+.font-inter {
+  font-family: "Inter", sans-serif;
+}
+
+.h1 {
+  font-size: 72px;
+}
+.h2 {
+  font-size: 64px;
+}
+.h3 {
+  font-size: 56px;
+}
+.h4 {
+  font-size: 48px;
+}
+.h5 {
+  font-size: 32px;
+}
+.h6 {
+  font-size: 24px;
+}
+
+.para1 {
+  font-size: 18px;
+  line-height: 30px;
+}
+.para2 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.text-black-primary {
+  color: $black-primary;
+}
+.text-black-secondary {
+  color: $black-secondary;
+}
+.text-white-primary {
+  color: $white-primary;
+}
+.text-white-secondary {
+  color: $white-secondary;
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #b16cea, #ff5e69, #ff8a56, #ffa84b);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.button-primary {
+  background-color: $black-primary;
+  color: $white-primary;
+  padding: 12px;
+  outline: none;
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+  @extend .font-inter;
+}
+
+.content {
+  padding: 0 32px;
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+a {
+  color: none;
+  text-decoration: none;
+  &:visited {
+    color: none;
+  }
+}

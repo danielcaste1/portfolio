@@ -1,0 +1,10 @@
+<section class="side-tools content">
+  <h3 class="title font-baijamjuree h6 text-black-secondary">
+    Other tools I use
+  </h3>
+  <div class="tools flex">
+    <div *ngFor="let tool of sideTools" class="tool">
+      <img [src]="'assets/images/' + tool.icon" alt="" />
+    </div>
+  </div>
+</section>
