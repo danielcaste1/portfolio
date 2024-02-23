@@ -1,0 +1,15 @@
+<section class="companies content">
+  <h3 class="font-baijamjuree h3 flex">
+    <div class="text-gradient">{{ "Companies " }}</div>
+    <div class="text-black-primary">I've worked with</div>
+  </h3>
+  <div class="sites flex">
+    <div
+      *ngFor="let company of companies"
+      class="site"
+      (click)="visitCompany(company.url)"
+    >
+      <img [src]="'assets/images/companies/' + company.logo" alt="" />
+    </div>
+  </div>
+</section>

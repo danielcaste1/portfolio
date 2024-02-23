@@ -1,0 +1,28 @@
+.projects {
+  .intro {
+    justify-content: space-between;
+    margin-top: 48px;
+    padding-top: 48px;
+    h1 {
+      text-align: start;
+      width: 50%;
+    }
+    p {
+      width: 50%;
+    }
+  }
+}
+.projects-preview {
+  flex-wrap: wrap;
+  margin: 96px auto;
+  justify-content: center;
+  gap: 48px;
+}
+
+.background-gradient {
+  padding: 48px;
+  text-align: center;
+  button {
+    margin-top: 24px;
+  }
+}

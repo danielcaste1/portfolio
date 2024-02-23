@@ -59,11 +59,28 @@
   color: $white-secondary;
 }
 
+.bg-black-primary {
+  background-color: $black-primary;
+}
+.bg-black-secondary {
+  background-color: $black-secondary;
+}
+.bg-white-primary {
+  background-color: $white-primary;
+}
+.bg-white-secondary {
+  background-color: $white-secondary;
+}
+
 .text-gradient {
   background: linear-gradient(to right, #b16cea, #ff5e69, #ff8a56, #ffa84b);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.background-gradient {
+  background: linear-gradient(to right, #b16cea, #ff5e69, #ff8a56, #ffa84b);
 }
 
 .button-primary {

@@ -1,0 +1,24 @@
+.companies {
+  margin-top: 96px;
+  h3 {
+    justify-content: center;
+    white-space: pre;
+  }
+}
+.sites {
+  margin: 48px 0;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  .site {
+    cursor: pointer;
+    width: 320px;
+    filter: grayscale(1) brightness(1);
+    img {
+      width: 100%;
+    }
+    &:hover {
+      filter: grayscale(1) brightness(0.8);
+    }
+  }
+}

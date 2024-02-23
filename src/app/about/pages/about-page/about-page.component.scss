@@ -1,0 +1,44 @@
+.who-am-i {
+  .intro {
+    justify-content: space-between;
+
+    margin-top: 48px;
+    padding-top: 48px;
+    h1 {
+      width: 50%;
+    }
+    p {
+      width: 50%;
+    }
+  }
+  .description {
+    margin-top: 48px;
+    p {
+      margin-bottom: 16px;
+    }
+    .picture {
+      float: left;
+      content: "";
+      width: 320px;
+      height: 320px;
+      background: linear-gradient(to right, #b16cea, #ff5e69, #ff8a56, #ffa84b);
+    }
+  }
+}
+.linkedin-cta {
+  margin-top: 150px;
+  justify-content: center;
+  align-items: center;
+
+  .text {
+    text-align: start;
+    align-items: center;
+    padding: 24px;
+    img {
+      margin: 0 auto;
+      margin-top: 24px;
+      width: 48px;
+      filter: invert(1);
+    }
+  }
+}

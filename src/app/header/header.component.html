@@ -1,11 +1,11 @@
 <header>
   <div class="flex content header-content">
     <ul class="flex font-inter para1">
-      <li *ngFor="let link of headerLinks" class="text-black-primary">
+      <li *ngFor="let link of headerLinks">
         <a
-          class="text-black-primary"
+          class="text-black-secondary"
           [routerLink]="[link.route]"
-          routerLinkActive="active"
+          routerLinkActive="text-gradient "
         >
           {{ link.name }}
         </a>

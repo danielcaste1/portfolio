@@ -1,0 +1,37 @@
+<div class="experience flex content">
+  <div class="education">
+    <h3 class="h3 font-baijamjuree text-gradient">Education</h3>
+    <div
+      *ngFor="let education of educationExperience"
+      class="experience-data flex"
+    >
+      <div>
+        <h6 class="h6 font-baijamjuree text-black-primary">
+          {{ education.title }}
+        </h6>
+        <p class="para2 font-inter text-black-secondary">
+          {{ education.place }}
+        </p>
+      </div>
+      <p class="para2 font-inter text-black-secondary">
+        {{ education.from }} - {{ education.to ? education.to : "Now" }}
+      </p>
+    </div>
+  </div>
+  <div class="work">
+    <h3 class="h3 font-baijamjuree text-gradient">Work experience</h3>
+    <div *ngFor="let education of workExperience" class="experience-data flex">
+      <div>
+        <h6 class="h6 font-baijamjuree text-black-primary">
+          {{ education.title }}
+        </h6>
+        <p class="para2 font-inter text-black-secondary">
+          {{ education.place }}
+        </p>
+      </div>
+      <p class="para2 font-inter text-black-secondary">
+        {{ education.from }} - {{ education.to ? education.to : "Now" }}
+      </p>
+    </div>
+  </div>
+</div>

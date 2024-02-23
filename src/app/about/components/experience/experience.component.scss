@@ -1,0 +1,14 @@
+.experience {
+  margin-top: 96px;
+  gap: 48px;
+  .education,
+  .work {
+    width: 50%;
+    .experience-data {
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 0;
+      border-bottom: 1px solid gray;
+    }
+  }
+}

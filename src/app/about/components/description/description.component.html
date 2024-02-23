@@ -1,0 +1,13 @@
+<div class="description">
+  <div class="avatar">
+    <img src="assets/images/me3.png" alt="" />
+  </div>
+  <div class="exp flex">
+    <div *ngFor="let metric of metrics" class="data">
+      <div class="text-gradient font-baijamjuree h3">{{ metric.value }}</div>
+      <div class="text-black-secondary font-inter para1">
+        {{ metric.description }}
+      </div>
+    </div>
+  </div>
+</div>

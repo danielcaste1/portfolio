@@ -1,0 +1,25 @@
+.contact {
+  align-items: center;
+  justify-content: center;
+  .contact-options {
+    width: 50%;
+    gap: 24px;
+    .option {
+      align-items: center;
+      gap: 12px;
+      img {
+        width: 28px;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .avatar {
+    width: 320px;
+    img {
+      filter: drop-shadow(0px 4px 22px #1c1c2274);
+      width: 100%;
+    }
+  }
+}
