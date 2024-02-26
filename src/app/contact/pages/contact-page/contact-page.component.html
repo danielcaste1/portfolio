@@ -1,30 +1,19 @@
-<section class="contact flex content">
-  <div class="contact-options flex flex-col">
+<section class="contact">
+  <div class="contact-intro flex flex-col">
     <h1 class="font-baijamjuree h1 text-gradient">Contact</h1>
     <p class="font-inter para1">
       Have a project in mind? Looking for a partner to wok with? You can call
-      me, text me or send and email
+      me, text me or send an email to
+      <a class="text-gradient" href="mailto:danielcastellanos.dev@gmail.com">
+        danielcastellanos.dev@gmail.com</a
+      >
     </p>
-    <div class="option flex">
-      <img src="assets/images/whatsapp.png" alt="" />
-      <a
-        class="text-black-primary font-inter para1"
-        target="_blank"
-        href="https://api.whatsapp.com/send?phone=573013500536"
-        >+57 3013500536</a
-      >
-    </div>
-    <div class="option flex">
-      <img src="assets/images/mail.png" alt="" />
-      <a
-        class="text-black-primary font-inter para1"
-        target="_blank"
-        href="mailto:danielcastellanos.dev@gmail.com"
-        >danielcastellanos.dev@gmail.com</a
-      >
-    </div>
   </div>
-  <div class="avatar">
-    <img src="assets/images/me2.png" alt="" />
+  <div class="contact-options flex flex">
+    <div *ngFor="let option of contactOptions" class="option flex">
+      <a [href]="option.url" target="_blank" class="bg-black-secondary">
+        <img [src]="'assets/images/' + option.icon" alt="" />
+      </a>
+    </div>
   </div>
 </section>

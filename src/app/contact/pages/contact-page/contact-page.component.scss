@@ -1,25 +1,30 @@
 .contact {
-  align-items: center;
-  justify-content: center;
-  .contact-options {
-    width: 50%;
+  .contact-intro {
     gap: 24px;
-    .option {
-      align-items: center;
-      gap: 12px;
-      img {
-        width: 28px;
-      }
-      a:hover {
-        text-decoration: underline;
-      }
-    }
+    margin: 0 auto;
+    width: 50%;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    padding-top: 48px;
+    margin-top: 48px;
   }
-  .avatar {
-    width: 320px;
-    img {
-      filter: drop-shadow(0px 4px 22px #1c1c2274);
-      width: 100%;
+  .contact-options {
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    padding: 24px;
+    .option {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      a {
+        padding: 12px;
+        border-radius: 12px;
+        img {
+          width: 48px;
+        }
+      }
     }
   }
 }
