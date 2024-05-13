@@ -9,10 +9,10 @@ import { Project } from '../../interfaces';
 export class ProjectsPageComponent {
   public projects: Project[] = [
     {
-      name: 'Productivity board',
-      thumbnail: 'productivity-board.jpg',
-      description: 'All in one productivity app (in progress)',
-      url: 'https://deploy.dapbexih93zvq.amplifyapp.com/',
+      name: 'Fundación Siruela',
+      thumbnail: 'fsiruela.png',
+      description: 'Landing page for Siruela Foundation',
+      url: 'https://www.fundacionsiruela.org/',
     },
   ];
 }
